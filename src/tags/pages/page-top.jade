@@ -1,14 +1,20 @@
 page-top
   div.wrap-page
-    h2 top
+    module-hiro
+    module-about-service
+    module-feature
+    module-customer-voice
+    module-cooperates
+    module-member
+    module-contact
+
+    
 
   style(scoped, type='less').
     :scope {
       .wrap-page {
         display: block;
         width: 100%;
-        height: 100%;
-        background: #FFFF00;
       }
     }
 
@@ -19,6 +25,5 @@ page-top
 
     this.on('mount', function(){
 
-      
     });
     
