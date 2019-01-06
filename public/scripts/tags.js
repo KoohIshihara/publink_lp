@@ -51,7 +51,7 @@ riot.tag2('module-feature', '<div class="wrap-module"> <h2>module-feature</h2> <
     });
 });
 
-riot.tag2('module-hiro', '<div class="wrap-module"> <h2>module-hiro</h2> </div>', 'module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{display:block;width:100%;max-width:1024px;margin:0 auto}', '', function(opts) {
+riot.tag2('module-hiro', '<div class="wrap-module"> <h2>module-hiro</h2> </div>', 'module-hiro,[data-is="module-hiro"]{display:block;width:100%;height:100vh;background:#005BE9} module-hiro .wrap-module,[data-is="module-hiro"] .wrap-module{display:block;width:100%;max-width:1024px;margin:0 auto}', '', function(opts) {
     var self = this;
 
     this.on('mount', function(){
