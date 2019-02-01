@@ -1,20 +1,93 @@
 module-member
-  div.wrap-module
-    h2 module-member
+  div.wrap-module.py80
+    item-h2(content='{h2}')
+    div.wrap-module-content.f.flex-between.flex-wrap.mt24
+      item-member(each='{item in memberContents}' content='{item}')
+      item-member-welcome
 
   style(scoped, type='less').
     :scope {
+      display: block;
+      background: #F1F1F6;
       .wrap-module {
         display: block;
         width: 100%;
-        max-width: 1024px;
+        max-width: 1040px;
         margin: 0 auto;
+        .wrap-module-content {
+          background: #FFF;
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          .wrap-module-content {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
       }
     }
 
   script.
 
     var self = this;
+
+    this.h2 = {
+      jp: 'メンバーのご紹介',
+      en: 'OUR MEMBER'
+    };
+
+    this.memberContents = [
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+      {
+        role: '代表取締役',
+        name: 'スペキュラティヴ太郎',
+        src: './img/member/test.jpg',
+        profile: '慶應義塾大学環境情報学部4年。株式会社ニューズピックスにて「NewsPicks」のアプリケーションデザインに従事する傍ら、株式会社モフでデザイナー／エンジニアとしてVRやARを用いたコンテンツ制作などを行う。',
+        button_visible: true,
+      },
+    ];
 
     this.on('mount', function(){
 

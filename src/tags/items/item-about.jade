@@ -1,0 +1,50 @@
+item-about
+  div(class='{opts.content.reverse}').wrap-item.f.flex-wrap.flex-around
+    div.wrap-img.f.fh
+        img(src='{opts.content.src}')
+    div.wrap-texts.f.fm
+      div.wrap-texts-content
+        h3.mb12 {opts.content.h3}
+        p {opts.content.p}
+
+
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      background: #F1F1F6;
+      .wrap-item {
+        .wrap-img {
+          width: 40%;
+        }
+        .wrap-texts {
+          width: 60%;
+          .wrap-texts-content {
+            h3 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .reverse {
+        flex-flow: row-reverse;
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-item {
+          display: block;
+          padding: 16px 0px;
+          .wrap-img {
+            width: 100%;
+            margin-bottom: 24px;
+          }
+          .wrap-texts {
+            width: 100%;
+            .wrap-texts-content {
+              width: 90%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+

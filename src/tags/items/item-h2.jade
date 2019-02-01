@@ -1,0 +1,42 @@
+item-h2.mb20
+  div.wrap-item
+    h2.pt16 {jp}
+    div.wrap-en
+      h2 {en}
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      .wrap-item {
+        position: relative;
+        h2 {
+          position: relative;
+          z-index: 2;
+          text-align: center;
+          color: #5B5B5B;
+          font-size: 32px;
+        }
+        .wrap-en {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+          h2 {
+            text-align: center;
+            font-size: 52px;
+            color: #fff;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+
+
+      }
+    }
+
+  script.
+
+    this.jp = opts.content.jp;
+    this.en = opts.content.en;
+    

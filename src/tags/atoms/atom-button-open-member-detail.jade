@@ -1,0 +1,33 @@
+atom-button-open-member-detail(onclick='{showProfile.bind(this, opts.content)}').py8
+  a.wrap-atom プロフィールをみる
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 70%;
+      border-radius: 20px;
+      background: #ECF0F4;
+      cursor: pointer;
+      a {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.on('mount', function(){
+      
+    });
+    
+    this.showProfile = function(content, e){
+
+      $('.wrap-modal-window').fadeIn(400);
+
+      riot.mount('modal-window', 'module-modal-member', {content: content});
+      riot.update();
+
+    }

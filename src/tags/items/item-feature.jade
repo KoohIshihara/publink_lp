@@ -1,0 +1,49 @@
+item-feature
+  div.wrap-item
+    div.wrap-img.mb12.f.fh
+      div.img-frame
+        img(src='{opts.content.src}')
+    div.wrap-explain
+      h3.mb8 {opts.content.h3}
+      p {opts.content.p}
+
+  style(scoped, type='less').
+    :scope {
+      width: 22%;
+      display: block;
+      background: #EDEDF2;
+      .wrap-item {
+        display: block;
+        max-width: 840px;
+        margin: 0 auto;
+        .wrap-img {
+          width: 100%;
+          .img-frame {
+            border-radius: 50%;
+            background: rgba(0, 91, 233, 0.1);
+            padding: 30px;
+          }
+        }
+        .wrap-explain {
+          h3 {
+            text-align: center;
+          }
+          p {
+            font-size: 14px;
+            text-align: center;
+            font-weight: lighter;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        & {
+          width: 80%;
+          margin: 0 auto;
+          padding-bottom: 40px;
+        }
+      }
+    }
+
+  script.
+
+    var self = this;

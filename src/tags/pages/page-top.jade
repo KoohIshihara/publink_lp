@@ -1,5 +1,6 @@
 page-top
   div.wrap-page
+    util-header
     module-hiro
     module-about-service
     module-feature
@@ -7,12 +8,14 @@ page-top
     module-cooperates
     module-member
     module-contact
+    util-footer
 
     
 
   style(scoped, type='less').
     :scope {
       .wrap-page {
+        position: relative;
         display: block;
         width: 100%;
       }

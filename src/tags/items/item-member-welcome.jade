@@ -1,0 +1,49 @@
+item-member-welcome
+  div.wrap-item.f.fh
+    div.wrap-item-content
+      p.mb28 あなたもパートナーメンバーに参加しませんか？      
+      div.wrap-button.f.fc
+        a.px12.py8 パートナーに登録
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 25%;
+      height: inherit;
+      background: #005BE9;
+      .wrap-item {
+        width: 100%;
+        height: 100%;
+        .wrap-item-content {
+          width: 80%;
+          margin: auto 0;
+          p {
+            color: #FFF;
+            text-align: center;
+          }
+          .wrap-button {
+            a {
+              width: 100%;
+              max-width: 220px;
+              display: block;
+              background: #FFF;
+              border-radius: 20px;
+              text-align: center;
+              color: #005BE9;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        & {
+          width: 100%;
+          height: 400px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+  script.
+
+    var self = this;

@@ -1,20 +1,56 @@
 module-feature
-  div.wrap-module
-    h2 module-feature
+  div.wrap-module.py80
+    item-h2(content='{h2}')
+    div.wrap-module-content.f.flex-between.flex-wrap.mt24.py20
+      item-feature(each='{item in featuresContents}' content='{item}')
+
 
   style(scoped, type='less').
     :scope {
+      display: block;
+      background: #EDEDF2;
       .wrap-module {
         display: block;
         width: 100%;
-        max-width: 1024px;
+        max-width: 1040px;
         margin: 0 auto;
+      }
+      @media only screen and (max-width : 600px) {
+        
       }
     }
 
   script.
 
     var self = this;
+
+    this.h2 = {
+      jp: '特徴',
+      en: 'MENTIONS'
+    };
+
+    this.featuresContents = [
+      {
+        h3: '専門知識',
+        p: '官民両方を実際に経験したプロフェッショナルによるコンサルティング',
+        src: './img/features/test.svg'
+      },
+      {
+        h3: '専門知識',
+        p: '官民両方を実際に経験したプロフェッショナルによるコンサルティング',
+        src: './img/features/test.svg'
+      },
+      {
+        h3: '専門知識',
+        p: '官民両方を実際に経験したプロフェッショナルによるコンサルティング',
+        src: './img/features/test.svg'
+      },
+      {
+        h3: '専門知識',
+        p: '官民両方を実際に経験したプロフェッショナルによるコンサルティング',
+        src: './img/features/test.svg'
+      },
+    ];
 
     this.on('mount', function(){
 

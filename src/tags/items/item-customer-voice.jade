@@ -1,0 +1,60 @@
+item-customer-voice.mb60
+  div.wrap-item
+    div.wrap-img
+      img(src='{opts.content.src}')
+    div.wrap-title.pt28.pl60.pr20
+      h3.mb12 {opts.content.h3}
+      p {opts.content.p}
+    div.wrap-icon
+      img(src='./img/icons/bg_icon.svg')
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 47%;
+      height: 300px;
+      background: #FFF;
+      .wrap-item {
+        position: relative;
+        height: 100%;
+        .wrap-img {
+          position: absolute;
+          top: -40px;
+          left: -40px;
+          width: 80px;
+          height: 80px;
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+        .wrap-title {
+          p {
+            font-size: 14px;
+            color: #707070;
+            line-height: 1.8;
+          }
+        }
+        .wrap-icon {
+          position: absolute;
+          right: 30px;
+          bottom: 30px;
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        & {
+          width: 80%;
+          height: 400px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.on('mount', function(){
+
+    });
+    

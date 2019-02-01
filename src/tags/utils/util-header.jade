@@ -1,0 +1,64 @@
+util-header
+  div.wrap-util.py30.f.flex-between
+    div.wrap-logo
+      p Publink
+    div.wrap-menu.f.fm.s-hide
+      p(each='{item in menuContents}' onclick='{toTarget.bind(this, item.target)}').mr16 {item.label}
+
+
+  style(scoped, type='less').
+    :scope {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      .wrap-util {
+        max-width: 1040px;
+        width: 100%;
+        margin: 0 auto;
+        .wrap-logo {
+          p {
+            font-weight: bold;
+            font-size: 24px;
+            color: #fff;
+            letter-spacing: 1.2px;
+          }
+        }
+        .wrap-menu {
+          p {
+            cursor: pointer;
+            font-size: 14px;
+            color: #fff;
+            letter-spacing: 1.2px;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-util {
+          max-width: 90%;
+        }
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.on('mount', function(){
+
+    });
+
+    this.menuContents = [
+      {label: 'サービス', target: 'module-about-service'},
+      {label: '特徴', target: 'module-feature'},
+      {label: 'パートナー企業', target: 'module-cooperates'},
+      {label: 'メンバー', target: 'module-member'},
+      {label: 'お問い合わせ', target: 'module-contact'},
+    ];
+
+    //TO_SCROLL.toScroll('module-contact');
+
+    this.toTarget = function(target, e){
+      TO_SCROLL.toScroll(target);
+    };

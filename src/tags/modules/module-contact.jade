@@ -1,14 +1,59 @@
 module-contact
-  div.wrap-module
-    h2 module-cooperates
+  div.wrap-module.py60
+    p.title.mb32 まずは気軽にご相談を
+    div.wrap-texts.mb50
+      p.mb12 「官僚との接点を作りたい」
+      p.mb12 「事業を推進するにあたって行政との連携を考えていきたい」
+      p.mb12 「官民、両サイドのことを理解している人材を採用したい」
+      p.mb12  もし、そんなお悩みをお持ちでしたら、全力で私たちにサポートさせてください。
+      p.mb12  私たちは本気で、この国の社会構造を変えようと考えています。
+      p まずはお気軽にご相談を。
+    div.wrap-button.f.fc
+      a.px12.py8 お問い合わせはこちら
+
 
     style(scoped, type='less').
       :scope {
+        display: block;
+        background: #005BE9;
         .wrap-module {
           display: block;
           width: 100%;
-          max-width: 1024px;
+          max-width: 520px;
           margin: 0 auto;
+          p {
+            color: #FFF;
+            text-align: center;
+            font-weight: lighter;
+            font-size: 14px;
+          }
+          .title {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .wrap-button {
+            a {
+              width: 100%;
+              max-width: 220px;
+              display: block;
+              background: #FFF;
+              border-radius: 20px;
+              text-align: center;
+              color: #005BE9;
+              cursor: pointer;
+            }
+          }
+        }
+        @media only screen and (max-width : 600px) {
+          .wrap-module {
+            width: 90%;
+            margin: 0 auto;
+            .wrap-texts {
+              p {
+                text-align: left;
+              }
+            }
+          }
         }
       }
 

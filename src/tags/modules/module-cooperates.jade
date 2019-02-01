@@ -1,20 +1,75 @@
 module-cooperates
-  div.wrap-module
-    h2 module-cooperates
+  div.wrap-module.py80
+    item-h2(content='{h2}')
+    div.wrap-module-content.f.flex-around.flex-wrap.mt32.px20.pt50.pb30
+      item-cooperate(each='{item in partonershipContents}' content='{item}')
 
   style(scoped, type='less').
     :scope {
+      display: block;
+      background: #EDEDF2;
       .wrap-module {
         display: block;
         width: 100%;
-        max-width: 1024px;
+        max-width: 1040px;
         margin: 0 auto;
+        .wrap-module-content {
+          background: #FFF;
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          .wrap-module-content {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
       }
     }
 
   script.
 
     var self = this;
+
+    this.h2 = {
+      jp: 'パートナー企業のご紹介',
+      en: 'PARTONERSHIP'
+    };
+
+    this.partonershipContents = [
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+      {
+        p: '株式会社FakeSFC',
+        src: './img/cooperates/test.svg',
+      },
+    ];
 
     this.on('mount', function(){
 

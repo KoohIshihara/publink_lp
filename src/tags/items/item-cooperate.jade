@@ -1,0 +1,40 @@
+item-cooperate
+  div.wrap-item.mb30
+    div.wrap-img.mb20
+      img(src='{opts.content.src}')
+    div.wrap-title
+      p {opts.content.p}
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 22%;
+      .wrap-item {
+        .wrap-img {
+          img {
+            width: 100%;
+          }
+        }
+        .wrap-title {
+          p {
+            text-align: center;
+          }
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        & {
+          width: 80%;
+          margin: 0 auto;
+          padding-bottom: 40px;
+        }
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.on('mount', function(){
+
+    });
+    

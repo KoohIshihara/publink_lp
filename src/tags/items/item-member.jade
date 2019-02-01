@@ -1,0 +1,51 @@
+item-member
+  div.wrap-item
+    div.wrap-img.f.fh.mb12
+      img(src='{opts.content.src}')
+    div.wrap-profile.mb20
+      p.role.mb4 {opts.content.role}
+      p.name {opts.content.name}
+    div.wrap-button.f.fc.pb30
+      atom-button-open-member-detail(content='{opts.content}')
+
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 25%;
+      .wrap-item {
+        .wrap-img {
+          width: 100%;
+          img {
+            width: 70%;
+            border-radius: 50%;
+          }
+        }
+        .wrap-profile {
+          .role {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+          }
+          .name {
+            font-size: 14px;
+            color: #2a2a2a;
+            text-align: center;
+          }
+        }
+      }
+      &.show-detail {
+        width: 80% !important;
+        margin: 0 auto;
+      }
+      @media only screen and (max-width : 600px) {
+        & {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+  script.
+
+    var self = this;

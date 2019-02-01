@@ -1,20 +1,47 @@
 module-about-service
-  div.wrap-module
-    h2 module-about-service
+  div.wrap-module.py80
+    item-h2(content='{h2}')
+    div.wrap-module-content.mt24
+      item-about(each='{item in aboutContents}' content='{item}')
+
 
   style(scoped, type='less').
     :scope {
+      display: block;
+      background: #F1F1F6;
       .wrap-module {
         display: block;
         width: 100%;
-        max-width: 1024px;
+        max-width: 840px;
         margin: 0 auto;
+      }
+      @media only screen and (max-width : 600px) {
+        
       }
     }
 
   script.
 
     var self = this;
+
+    this.h2 = {
+      jp: 'サービス内容',
+      en: 'WHAT WE CAN DO'
+    };
+
+    this.aboutContents = [
+      {
+        h3: '最適な人材マッチング',
+        p: '「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが官民の連携です。私たち Publink は、新しい社会を共創するための「社会性（政策サイド）」と「事業性（ビジネスサイド）」の両サイドの架け橋となります。',
+        src: './img/about/test.svg',
+      },
+      {
+        h3: '最適な人材マッチング',
+        p: '「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが官民の連携です。私たち Publink は、新しい社会を共創するための「社会性（政策サイド）」と「事業性（ビジネスサイド）」の両サイドの架け橋となります。',
+        src: './img/about/test.svg',
+        reverse: 'reverse'
+      }
+    ];
 
     this.on('mount', function(){
 

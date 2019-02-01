@@ -1,20 +1,63 @@
 module-customer-voice
-  div.wrap-module
-    h2 module-customer-voice
+  div.wrap-module.py80
+    item-h2(content='{h2}')
+    div.wrap-module-content.f.flex-between.flex-wrap.mt24.pt50
+      item-customer-voice(each='{item in customerVoiceContents}' content='{item}')
 
   style(scoped, type='less').
     :scope {
+      display: block;
+      background: #F1F1F6;
       .wrap-module {
         display: block;
         width: 100%;
-        max-width: 1024px;
+        max-width: 1040px;
         margin: 0 auto;
+        .wrap-module-content {
+
+        }
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          .wrap-module-content {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
       }
     }
 
   script.
 
     var self = this;
+
+    this.h2 = {
+      jp: 'お客様の声',
+      en: 'Customer Voice'
+    };
+
+    this.customerVoiceContents = [
+      {
+        h3: '株式会社FakeSFC',
+        p: '「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが官民の連携です。私たち Publink は、新しい社会を共創するための「社会性（政策サイド）」と「事業性（ビジネスサイド）」の両サイドの架け橋となります。',
+        src: './img/customer_voices/test.jpg',
+      },
+      {
+        h3: '株式会社FakeSFC',
+        p: '「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが官民の連携です。私たち Publink は、新しい社会を共創するための「社会性（政策サイド）」と「事業性（ビジネスサイド）」の両サイドの架け橋となります。',
+        src: './img/customer_voices/test.jpg',
+      },
+      {
+        h3: '株式会社FakeSFC',
+        p: '「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが官民の連携です。私たち Publink は、新しい社会を共創するための「社会性（政策サイド）」と「事業性（ビジネスサイド）」の両サイドの架け橋となります。',
+        src: './img/customer_voices/test.jpg',
+      },
+      {
+        h3: '株式会社FakeSFC',
+        p: '「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが官民の連携です。私たち Publink は、新しい社会を共創するための「社会性（政策サイド）」と「事業性（ビジネスサイド）」の両サイドの架け橋となります。',
+        src: './img/customer_voices/test.jpg',
+      },
+    ];
 
     this.on('mount', function(){
 

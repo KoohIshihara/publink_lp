@@ -1,10 +1,11 @@
 module-hiro
   div.wrap-module.f.fm
+    //util-header
     div.wrap-texts
-      div.wrap-copy.mb28
+      div.wrap-copy.mb32
         p 官と民をつないで、
         p 日本を変えよう
-      div.wrap-tagline.mb28
+      div.wrap-tagline.mb50
         p 「シェアリングエコノミー」「フィンテック」「エドテックなど」、今、社会は人々の想像を大きく超えるスピードで変化しています。これからの時代、ますます必要とされるのが
       div.wrap-button
         atom-button-contact
@@ -22,15 +23,15 @@ module-hiro
       .wrap-module {
         position: relative;
         z-index: 10;
-        width: 100%;
+        width: 90%;
         height: 100%;
-        max-width: 1024px;
+        max-width: 840px;
         margin: 0 auto;
         .wrap-texts {
           max-width: 460px;
           .wrap-copy {
             p {
-              font-size: 36px;
+              font-size: 48px;
               font-weight: bold;
               color: #fff;
             }
@@ -52,6 +53,25 @@ module-hiro
         height: 100%;
         left: 0;
         top: 0;
+      }
+      @media only screen and (max-width : 600px) {
+        .wrap-module {
+          .wrap-texts {
+            .wrap-copy {
+              p {
+                font-size: 36px;
+                font-weight: bold;
+                color: #fff;
+              }
+            }
+            .wrap-tagline {
+              p {
+                font-size: 16px;
+                color: #fff;
+              }
+            }
+          }
+        }
       }
     }
 
